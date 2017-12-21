@@ -1,3 +1,3 @@
-# DevskillBase
+# Devskill
 
-Knowledge base and skillsharing platform for developers build with Angular 5 and firebase
+Knowledge base and skillsharing platform for frontend developers inside Divante / Angular 5 and Firebase
