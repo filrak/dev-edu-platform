@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'workshops-widget',
+  selector: 'workshop-widget',
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.scss']
 })
