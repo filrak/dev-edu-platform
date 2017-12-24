@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
-import { WorkshopsModule } from '../workshops/workshops.module';
+import { UserModule } from '../user/user.module'
+import { WorkshopModule } from '../workshop/workshop.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WorkshopsModule } from '../workshops/workshops.module';
   ],
   imports: [
     BrowserModule,
-    WorkshopsModule
+    WorkshopModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

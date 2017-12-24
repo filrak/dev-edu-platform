@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { WorkshopsRoutingModule } from './workshops-routing.module';
-import { WidgetComponent } from './widget/widget.component'
+import { WorkshopRoutingModule } from './workshop-routing.module';
+import { WidgetComponent } from './components/widget/widget.component'
 
 @NgModule({
   imports: [
     CommonModule,
-    WorkshopsRoutingModule,
+    WorkshopRoutingModule
   ],
   declarations: [
     WidgetComponent
@@ -16,4 +16,4 @@ import { WidgetComponent } from './widget/widget.component'
     WidgetComponent
   ]
 })
-export class WorkshopsModule { }
+export class WorkshopModule { }

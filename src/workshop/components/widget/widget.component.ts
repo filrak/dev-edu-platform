@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'workshops-widget',
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.scss']
 })
-export class WidgetComponent implements OnInit {
+export class WidgetComponent{
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
