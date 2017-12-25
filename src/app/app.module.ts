@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-import { UserModule } from '../user/user.module'
-import { WorkshopModule } from '../workshop/workshop.module';
+import { AppRoutingModule } from './app-routing.module';
+
+import { WidgetModule } from './modules/widget/widget.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,8 @@ import { WorkshopModule } from '../workshop/workshop.module';
   ],
   imports: [
     BrowserModule,
-    WorkshopModule,
-    UserModule
+    AppRoutingModule,
+    WidgetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
