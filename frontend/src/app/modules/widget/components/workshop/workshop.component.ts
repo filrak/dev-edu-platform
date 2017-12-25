@@ -10,8 +10,12 @@ export class WorkshopComponent {
   workshops: Array<any>;
 
   constructor(private widgetService: WidgetService) { 
-    this.workshops = widgetService.workshops;
+    //Temporary workaround for async calls
+    widgetService.fetchData().then(
+      (res) =>  {
+        this.workshops = res.workshops
+      }
+    )
   }
-
 
 }
