@@ -1,3 +1,4 @@
+import { WidgetService } from './../../services/widget.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,8 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./workshop.component.scss']
 })
 export class WorkshopComponent {
+  workshops: Array<any>;
 
-  constructor() { }
+  constructor(private widgetService: WidgetService) { 
+    this.workshops = widgetService.workshops;
+  }
 
 
 }
