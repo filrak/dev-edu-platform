@@ -13,7 +13,7 @@ export class WorkshopComponent implements OnInit{
 
   ngOnInit() {
     this.widgetService.getData().then( 
-      data => this.workshops = data.workshops 
+      (data: any) => this.workshops = data.workshops 
     )
   }
 

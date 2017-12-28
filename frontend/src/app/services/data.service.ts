@@ -7,7 +7,7 @@ export class DataService {
 
   //TODO: cache received data in Local Storage 
   async getData (queryParam?: string): Promise<string> {
-    let res = queryParam ? await fetch(this._url) : await fetch(this._url + queryParam)
+    let res = queryParam ? await fetch(this._url + '/' + queryParam) : await fetch(this._url)
     let data = await res.json()
     return data
   }

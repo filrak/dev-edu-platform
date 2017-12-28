@@ -5,7 +5,7 @@ import { DataService } from './../../../services/data.service';
 export class WidgetService extends DataService {
 
   constructor() {
-    super('http://localhost:3001/dashboard');
+    super('http://localhost:3002/dashboard');
   }
 }
   
