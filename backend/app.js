@@ -12,9 +12,12 @@ const controller = {
 
 const port = process.env.port || 3001
 
-app.use(middleware.cors)
+for (const m in middleware) {
+  app.use(middleware[m])
+}
 
-app.use('/dashboard', controller.dashboard)
-app.use('/workshop', controller.workshop)
+for (const c in controller) {
+  app.use('/' + c, controller[c])
+}
 
 app.listen(port)
