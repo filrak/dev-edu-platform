@@ -5,11 +5,12 @@ export class DataService {
 
   constructor(private _url: string) {}
 
-  //TODO: cache received data
-  async getData ():Promise<string> {
-    let res = await fetch(this._url)
+  //TODO: cache received data in Local Storage 
+  async getData (queryParam?: string): Promise<string> {
+    let res = queryParam ? await fetch(this._url) : await fetch(this._url + queryParam)
     let data = await res.json()
     return data
   }
+  
 
 }

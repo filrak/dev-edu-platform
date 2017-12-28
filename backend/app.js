@@ -1,19 +1,20 @@
 const express = require('express')
 const app = express()
 
+const middleware = {
+  cors: require('./middlewares/cors')
+}
+
+const controller = {
+  dashboard: require('./controllers/dashboard'),
+  workshop: require('./controllers/workshop')
+}
+
 const port = process.env.port || 3001
 
-//placeholders for API cals
-const dashboardJSON = require('./mock/dashboard.json')
+app.use(middleware.cors)
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-})
-
-app.get('/dashboard', (req, res) => {
-  res.json(dashboardJSON)
-})
+app.use('/dashboard', controller.dashboard)
+app.use('/workshop', controller.workshop)
 
 app.listen(port)
