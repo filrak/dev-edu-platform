@@ -4,6 +4,7 @@ const Schema = db.Schema
 const schema = new Schema({
   title: { type: String, required: true },
   author: { type: String, required: true },
+  authorEmail: { type: String, required: true },
   date: { type: Date, required: true },
   duration: { type: Number, required: true },
   description: { type: String, required: true },

@@ -8,7 +8,6 @@ const middleware = {
 }
 
 const controller = {
-  dashboard: require('./controllers/dashboard'),
   workshop: require('./controllers/workshop')
 }
 

@@ -12,8 +12,15 @@ export class WorkshopComponent implements OnInit{
   constructor(private widgetService: WidgetService) { }
 
   ngOnInit() {
-    this.widgetService.getData().then( 
-      (data: any) => this.workshops = data.workshops 
+    this.widgetService.getData('workshop').then( 
+      (data: any) => { 
+        data = data.map((el) => {
+          el.date = new Date(el.date).toLocaleDateString()
+          return el
+        })
+        
+        this.workshops = data 
+      }
     )
   }
 
