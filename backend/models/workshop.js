@@ -3,12 +3,20 @@ const Schema = db.Schema
 
 const schema = new Schema({
   title: { type: String, required: true },
-  author: { type: String, required: true },
-  authorEmail: { type: String, required: true },
+  author: {    
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: { type: String, required: true } 
+  },
   date: { type: Date, required: true },
   duration: { type: Number, required: true },
   description: { type: String, required: true },
-  type: { type: String, required: true, enum: ['front', 'back', 'qa'] }
+  type: { type: String, required: true, enum: ['front', 'back', 'qa'] },
+  attendants: [{
+    firstName: String,
+    lastName: String,
+    email: String
+  }]
 })
 
 const Workshop = db.model('Workshop', schema)
