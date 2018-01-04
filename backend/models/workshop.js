@@ -17,9 +17,9 @@ const schema = new Schema({
     lastName: String,
     email: String
   }]
-})
+}, { collection: 'workshop' })
 
-const Workshop = db.model('Workshop', schema)
+const Workshop = db.model('workshop', schema)
 
 module.exports = {
   get (params) {
@@ -28,11 +28,14 @@ module.exports = {
       else console.log("Retrieved data", data)
     })
   },
-  add (obj) {
+  add (obj, callback) {
     const newWorkshop = Workshop(obj)
     newWorkshop.save(err => {
       if (err) throw err
-      else console.log("Workshop created", obj)
+      else { 
+        console.log("Workshop created", obj)
+        callback ? callback() : null
+      }
     })
   }
 }

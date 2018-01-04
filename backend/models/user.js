@@ -6,6 +6,4 @@ const schema = new Schema({
   firstName: { type: String, required: true },
   lastname: { type: String, required: true },
   role: { type: String, enum: ['user', 'leader', 'admin'], default: 'user'}
-})
-
-const User = new Model('User', schema)
+}, { collection: 'user' } )

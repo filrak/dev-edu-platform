@@ -12,7 +12,7 @@ export class WorkshopsComponent implements OnInit {
   constructor(private workshopService: WorkshopService) { }
 
   ngOnInit () {
-    this.workshopService.getData({ name: "Filip"}).then( 
+    this.workshopService.getData().then( 
       (data: any) => this.workshops = data
     )
   }
