@@ -1,11 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+$c-workshop: #C2185B;
+$c-link: #1e87f0;
 $transition-time: 0.2s;
 
 @mixin transition {
-    transition: $transition-time all;            
+    transition: $transition-time all;
     &:hover {
-        transition: $transition-time all;                    
-    }    
+        transition: $transition-time all;
+    }
 }
 
 .uk-tooltip {
@@ -14,7 +15,7 @@ $transition-time: 0.2s;
     border-radius: 5px;
 }
 
-.widget-icon > .fa {
+.widget-icon>.fa {
     @include transition;
     position: absolute;
     color: white;
@@ -22,24 +23,36 @@ $transition-time: 0.2s;
     top: 20px;
     font-size: 40px;
     &:before {
-        text-shadow: 0 0 15px rgba(0,0,0,.1);        
+        text-shadow: 0 0 15px rgba(0, 0, 0, .1);
     }
+}
 
-  }
+.widget-icon-link:hover>.fa {
+    color: #1e87f0;
+}
 
-  .widget-icon-link:hover > .fa {
-    color: #1e87f0;    
-  }
-  .btn {
-      @include transition;
-      box-shadow: 0 5px 25px rgba(0,0,0,.1);        
-      padding: 10px 15px;
-      color: white;
-      background: #1e87f0;
-      border-radius: 5px;
+.btn {
+    @include transition;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    padding: 10px 15px;
+    color: white;
+    background: #1e87f0;
+    border-radius: 5px;
+    &:hover {
+        text-decoration: none;                    
+    }
+    &.btn-workshop {
+        background: $c-workshop;
         &:hover {
-            background: white;
-            color: #1e87f0;
+            color: $c-workshop;
+            background: white;            
         }
-      
-  }
+    }
+    &.btn-link {
+        background: $c-link;
+        &:hover {
+            color: $c-link;
+            background: white;            
+        }
+    }
+}
