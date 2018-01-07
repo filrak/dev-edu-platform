@@ -5,6 +5,7 @@ import { WorkshopService } from '../workshop/services/workshop.service'
 
 import { WorkshopComponent } from './components/workshop/workshop.component'
 import { WorkshopsComponent } from './components/workshops/workshops.component'
+import { LinksComponent } from './components/links/links.component'
 
 @NgModule({
   imports: [
@@ -15,10 +16,12 @@ import { WorkshopsComponent } from './components/workshops/workshops.component'
   ],
   declarations: [
     WorkshopComponent,
-    WorkshopsComponent
+    WorkshopsComponent,
+    LinksComponent
   ],
   exports: [
-    WorkshopsComponent
+    WorkshopsComponent,
+    LinksComponent
   ]
 })
 export class WidgetModule { }

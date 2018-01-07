@@ -1,0 +1,40 @@
+<div class="uk-text-right uk-margin-medium-bottom">
+    <a href="" class="btn">Więcej linków</a>
+    <a (click)="editMode = !editMode" title="Dodaj link" uk-tooltip="pos: bottom" class="btn">
+        <i [ngClass]="{ 'fa' : true , 'fa-plus' : !editMode, 'fa-minus' : editMode }" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="links">
+
+    <a href="#" *ngFor="let link of links">
+        <div class="uk-card uk-card-default uk-card-hover uk-margin widget-icon widget-icon-link">
+            <i class="fa fa-mouse-pointer fa-2x" aria-hidden="true"></i>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{ link.title }}</h3>
+                <p class="uk-text-meta uk-margin-small-top uk-text-small">
+                    {{ link.description }}
+                </p>
+                <p class="uk-text-meta uk-text-small tags">
+                    <span *ngFor="let tag of link.tags">{{ tag }}</span>
+                </p>
+            </div>
+        </div>
+    </a>
+
+    <div class="add-link" [ngClass]="{ 'hidden' : !editMode }">
+        <div class="add-link-form uk-card uk-card-primary uk-card-hover uk-margin-medium-bottom" [ngClass]="{ 'hidden' : !editMode }">
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Podziel się ciekawym linkiem</h3>
+                <form>
+                    <input type="text" class="uk-input" placeholder="Tytuł linka">
+                    <input type="text" class="uk-input uk-margin-small-top" placeholder="Adres URL">
+                    <textarea class="uk-input uk-margin-small-top" placeholder="Krótki opis (opcjonalne)"></textarea>
+                    <button class="uk-button uk-button-primary uk-margin-small-top">Podziel się</button>
+                    <button class="uk-button uk-button-default uk-margin-small-top" (click)="editMode = false">Anuluj</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

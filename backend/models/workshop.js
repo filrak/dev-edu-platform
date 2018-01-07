@@ -11,7 +11,7 @@ const schema = new Schema({
   date: { type: Date, required: true },
   duration: { type: Number, required: true },
   description: { type: String, required: true },
-  type: { type: String, required: true, enum: ['front', 'back', 'qa'] },
+  type: { type: String, required: true, enum: ['front', 'back', 'qa', 'company'] },
   attendants: [{
     firstName: String,
     lastName: String,

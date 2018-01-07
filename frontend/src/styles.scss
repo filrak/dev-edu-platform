@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+$transition-time: 0.2s;
+
+@mixin transition {
+    transition: $transition-time all;            
+    &:hover {
+        transition: $transition-time all;                    
+    }    
+}
+
+.uk-tooltip {
+    background: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.widget-icon > .fa {
+    @include transition;
+    position: absolute;
+    color: white;
+    right: 20px;
+    top: 20px;
+    font-size: 40px;
+    &:before {
+        text-shadow: 0 0 15px rgba(0,0,0,.1);        
+    }
+
+  }
+
+  .widget-icon-link:hover > .fa {
+    color: #1e87f0;    
+  }
+  .btn {
+      @include transition;
+      box-shadow: 0 5px 25px rgba(0,0,0,.1);        
+      padding: 10px 15px;
+      color: white;
+      background: #1e87f0;
+      border-radius: 5px;
+        &:hover {
+            background: white;
+            color: #1e87f0;
+        }
+      
+  }

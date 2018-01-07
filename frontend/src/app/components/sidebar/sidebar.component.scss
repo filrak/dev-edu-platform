@@ -5,7 +5,30 @@
   left: 0;
   text-align: center;
   height: 100vh;
+  background: black;
   i {
-    margin-top: 20px;
+    padding: 20px 0;
+    width: 100%;
+    &:hover {
+      background: rgba(255,255,255, 0.1)      
+    }
   }
+  a {
+    display: block;
+    color: white;
+    transition: 0.3s all;    
+  }
+
+  .is-active {
+    &.dashboard {
+      color: black;
+      
+    }
+    &.workshops {
+      color: #C2185B;
+    }
+    background: white;
+    transition: 0.3s all;
+  }
+
 }

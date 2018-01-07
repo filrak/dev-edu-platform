@@ -1,3 +1,13 @@
 i.fa {
     padding: 5px;
 }
+.uk-card {
+    box-sizing: border-box;
+    &:before {
+        content: '';
+        background-color: #C2185B;
+        position: absolute;
+        width: 5px;
+        height: 100%;
+    }
+}

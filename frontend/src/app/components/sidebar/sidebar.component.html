@@ -1,8 +1,11 @@
-<div class="sidebar uk-card uk-card-secondary uk-light">
-  <a title="Kokpit" uk-tooltip="pos: right" routerLink="">
+<div class="sidebar uk-card uk-light">
+  <a title="Kokpit" uk-tooltip="pos: right" routerLink="/"  [ngClass]="{ 'is-active' : isHomepage, 'dashboard' : true }">
     <i class="fa fa-home fa-2x" aria-hidden="true"></i>
   </a>
-  <a title="Szkolenia" uk-tooltip="pos: right" routerLink="/workshop">
+  <a title="Szkolenia" uk-tooltip="pos: right" routerLink="/workshop"  [routerLinkActive]="['is-active']" class="workshops">
     <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+  </a>
+  <a title="Linki" uk-tooltip="pos: right" routerLink="/workshop">
+    <i class="fa fa-mouse-pointer fa-2x" aria-hidden="true"></i>
   </a>
 </div>
