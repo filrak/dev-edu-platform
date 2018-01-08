@@ -1,0 +1,15 @@
+.widget-icon >.fa {
+    @include transition;
+    position: absolute;
+    color: white;
+    right: 20px;
+    top: 20px;
+    font-size: 40px;
+    &:before {
+        text-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    }
+}
+
+.widget-icon-link:hover>.fa {
+    color: #1e87f0;
+}

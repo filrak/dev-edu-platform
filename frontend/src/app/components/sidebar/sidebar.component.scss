@@ -1,34 +1,36 @@
+@import '../../../styles/vars';
+
 .sidebar {
-  width: 70px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: center;
-  height: 100vh;
-  background: black;
-  i {
-    padding: 20px 0;
-    width: 100%;
-    &:hover {
-      background: rgba(255,255,255, 0.1)      
+    width: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    height: 100vh;
+    background: black;
+    i {
+        padding: 20px 0;
+        width: 100%;
+        &:hover {
+            background: rgba(255, 255, 255, 0.1)
+        }
     }
-  }
-  a {
-    display: block;
-    color: white;
-    transition: 0.3s all;    
-  }
-
-  .is-active {
-    &.dashboard {
-      color: black;
-      
+    a {
+        display: block;
+        color: white;
+        transition: 0.3s all;
     }
-    &.workshops {
-      color: #C2185B;
+    .is-active {
+        background: white;
+        transition: 0.3s all;
+        &.dashboard {
+            color: black;
+        }
+        &.workshops {
+            color: $c-workshop;
+        }
+        &.links {
+          color: $c-link;
+      }
     }
-    background: white;
-    transition: 0.3s all;
-  }
-
 }

@@ -1,5 +1,5 @@
 <div class="uk-text-right uk-margin-medium-bottom">
-        <a href="" class="btn btn-workshop">Więcej szkoleń</a>
+        <a routerLink="/workshop" class="btn btn-workshop">Więcej szkoleń</a>
         <a (click)="editMode = !editMode" title="Dodaj szkolenie" uk-tooltip="pos: bottom" class="btn btn-workshop">
             <i [ngClass]="{ 'fa' : true , 'fa-plus' : !editMode, 'fa-minus' : editMode }" aria-hidden="true"></i>
         </a>

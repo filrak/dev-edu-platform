@@ -1,0 +1,6 @@
+@mixin transition {
+    transition: $transition-time all;
+    &:hover {
+        transition: $transition-time all;
+    }
+}

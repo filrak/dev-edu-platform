@@ -1,34 +1,7 @@
-$c-workshop: #C2185B;
-$c-link: #1e87f0;
-$transition-time: 0.2s;
-
-@mixin transition {
-    transition: $transition-time all;
-    &:hover {
-        transition: $transition-time all;
-    }
-}
-
 .uk-tooltip {
     background: black;
     padding: 5px 10px;
     border-radius: 5px;
-}
-
-.widget-icon>.fa {
-    @include transition;
-    position: absolute;
-    color: white;
-    right: 20px;
-    top: 20px;
-    font-size: 40px;
-    &:before {
-        text-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    }
-}
-
-.widget-icon-link:hover>.fa {
-    color: #1e87f0;
 }
 
 .btn {
@@ -56,3 +29,4 @@ $transition-time: 0.2s;
         }
     }
 }
+

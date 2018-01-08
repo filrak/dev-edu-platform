@@ -8,20 +8,7 @@
 
 <div class="links">
 
-    <a href="#" *ngFor="let link of links">
-        <div class="uk-card uk-card-default uk-card-hover uk-margin widget-icon widget-icon-link">
-            <i class="fa fa-mouse-pointer fa-2x" aria-hidden="true"></i>
-            <div class="uk-card-body">
-                <h3 class="uk-card-title uk-margin-remove-bottom">{{ link.title }}</h3>
-                <p class="uk-text-meta uk-margin-small-top uk-text-small">
-                    {{ link.description }}
-                </p>
-                <p class="uk-text-meta uk-text-small tags">
-                    <span *ngFor="let tag of link.tags">{{ tag }}</span>
-                </p>
-            </div>
-        </div>
-    </a>
+    <widget-link *ngFor="let l of links" [link]="l"></widget-link>
 
     <div class="add-link" [ngClass]="{ 'hidden' : !editMode }">
         <div class="add-link-form uk-card uk-card-primary uk-card-hover uk-margin-medium-bottom" [ngClass]="{ 'hidden' : !editMode }">

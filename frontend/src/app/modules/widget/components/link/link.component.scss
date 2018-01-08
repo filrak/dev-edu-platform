@@ -1,0 +1,37 @@
+@import '../../../../../styles/vars';
+
+a {
+    .uk-card-default {
+        transition: $transition-time all;
+    }
+    .uk-card {
+        padding-right: 10%;
+        overflow: hidden;
+    }
+    .uk-card-title {
+        font-size: 1.2rem;
+        color: $c-link;
+    }
+    .tags {
+        span {
+            background: rgba(0, 0, 0, .03);
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+    }
+    .uk-card-title {
+        font-weight: 600;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+    .uk-card-default {
+        transition: $transition-time all;
+        background: #1e87f0;
+    }
+    .uk-card-title,
+    .uk-text-meta {
+        color: white;
+    }
+}

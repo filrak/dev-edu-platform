@@ -1,3 +1,5 @@
+@import '../../../../../styles/vars';
+
 i.fa {
     padding: 5px;
 }
@@ -5,7 +7,7 @@ i.fa {
     box-sizing: border-box;
     &:before {
         content: '';
-        background-color: #C2185B;
+        background-color: $c-workshop;
         position: absolute;
         width: 5px;
         height: 100%;

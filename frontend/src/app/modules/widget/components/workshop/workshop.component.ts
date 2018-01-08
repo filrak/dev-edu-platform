@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./workshop.component.scss']
 })
 export class WorkshopComponent{
-  @Input() workshop: any
+  @Input('workshop') workshop: any
 
   constructor() { }
 }
